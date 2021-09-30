@@ -1,3 +1,12 @@
+# How to run the code
+On terminal run:
+* python create_tables.py
+* python etl.py
+
+You can use test.ipynb to do sql queries (%sql for only one line or %%sql for the whole cell.)
+
+In the files `etl.ipynb` and `sql_query` you will see, with more detail, how everyting works.
+
 # Document Process
 ## Data modeling importance in an startup.
 Being able to monitor, track and have a clear image of what's going one with the main KPIs of the company, your area or team
