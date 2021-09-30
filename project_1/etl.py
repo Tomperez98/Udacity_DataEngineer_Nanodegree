@@ -37,7 +37,6 @@ def process_log_file(cur, filepath):
 
     # convert timestamp column to datetime
     df["ts"] = pd.to_datetime(df["ts"], unit="ms")
-    t = pd.to_datetime(df["ts"], unit="ms") 
     
     # insert time data records
     def get_time_dimensions(x):
@@ -47,7 +46,7 @@ def process_log_file(cur, filepath):
 
         return x, x.hour, x.day, x.weekofyear, x.month, x.year, x.dayofweek
 
-    time_data = [*t.apply(get_time_dimensions).values]
+    time_data = [*df["ts"].apply(get_time_dimensions).values]
     column_labels = ("start_time", "hour", "day", "weekofyear", "month", "year", "weekday")
     time_df = pd.DataFrame(data=time_data, columns=column_labels)
 

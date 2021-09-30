@@ -1,4 +1,12 @@
-# How to run the code
+# Documented Process
+## Files description
+* `create_tables.py`: This script drops anything there's in the database and resets both the database and the tables.
+* `sql_queries.py`: Here we have all the SQL queries use in the initialization of the database and the data insertion of rows.
+* `etl.py`: This script is where the data extraction from \*.json files, transformation of data and load into the database happends.
+* `etl.ipynb`: Playground file to do a fast implementation, debugging and code iteration for the etl process.
+* `test.ipynb`: Playground file to run SQL queries into the database and confirm everything is working as expected.
+
+## How to run the code
 On terminal run:
 * python create_tables.py
 * python etl.py
@@ -7,7 +15,6 @@ You can use test.ipynb to do sql queries (%sql for only one line or %%sql for th
 
 In the files `etl.ipynb` and `sql_query` you will see, with more detail, how everyting works.
 
-# Document Process
 ## Data modeling importance in an startup.
 Being able to monitor, track and have a clear image of what's going one with the main KPIs of the company, your area or team
 is one, if not, the most important thing to take decisions. Data models allow us to simplify and make queries faster which, 
